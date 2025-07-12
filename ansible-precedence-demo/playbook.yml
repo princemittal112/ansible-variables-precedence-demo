@@ -1,0 +1,12 @@
+- hosts: localhost
+  vars:
+    my_message: "This is from playbook vars"
+
+  tasks:
+    - name: Set using set_fact
+      set_fact:
+        my_message: "This is from set_fact"
+
+    - name: Include role
+      include_role:
+        name: myrole
